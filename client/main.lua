@@ -21,7 +21,7 @@ local timeoutTimer = 30
 local horsePed = 0
 local horseSpawned = false
 local HorseCalled = false
-local QRCore = exports['qr-core']:GetCoreObject()
+local RSGCore = exports['rsg-core']:GetCoreObject()
 local newnames = ''
 local horseDBID
 --
@@ -90,11 +90,11 @@ RegisterNetEvent('tcrp-stables:client:custShop', function()
     if horsePed ~= 0 then 
         createCamera(horsePed)
     else 
-        QRCore.Functions.Notify('No Horse Detected', 'error', 7500)
+        RSGCore.Functions.Notify('No Horse Detected', 'error', 7500)
     end
 end)
 RegisterCommand('sethorsename',function(input)
-    local input = exports['qr-input']:ShowInput({
+    local input = exports['rsg-input']:ShowInput({
     header = "Name your horse",
     submitText = "Confirm",
     inputs = {
@@ -138,7 +138,7 @@ Citizen.CreateThread(function() -- Handle Colter
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -187,7 +187,7 @@ Citizen.CreateThread(function() -- Handle Colter
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -281,7 +281,7 @@ Citizen.CreateThread(function() -- Handle VanHorn
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -330,7 +330,7 @@ Citizen.CreateThread(function() -- Handle VanHorn
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -424,7 +424,7 @@ Citizen.CreateThread(function() -- Handle Valentine
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -473,7 +473,7 @@ Citizen.CreateThread(function() -- Handle Valentine
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -567,7 +567,7 @@ Citizen.CreateThread(function() -- Handle Rhodes
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -616,7 +616,7 @@ Citizen.CreateThread(function() -- Handle Rhodes
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -710,7 +710,7 @@ Citizen.CreateThread(function() -- Handle Blackwater
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -759,7 +759,7 @@ Citizen.CreateThread(function() -- Handle Blackwater
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -853,7 +853,7 @@ Citizen.CreateThread(function() -- Handle Strawberry
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -902,7 +902,7 @@ Citizen.CreateThread(function() -- Handle Strawberry
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -996,7 +996,7 @@ Citizen.CreateThread(function() -- Handle Saint Denis
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -1045,7 +1045,7 @@ Citizen.CreateThread(function() -- Handle Saint Denis
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -1138,7 +1138,7 @@ Citizen.CreateThread(function() -- Handle Tumbleweed
                             SetEntityCanBeDamaged(entity, false)
                             SetEntityInvincible(entity, true)
                             SetBlockingOfNonTemporaryEvents(npc, true)
-                            exports['qr-target']:AddTargetEntity(entity, {
+                            exports['rsg-target']:AddTargetEntity(entity, {
                                 options = {
                                     {
                                         icon = "fas fa-horse-head",
@@ -1187,7 +1187,7 @@ Citizen.CreateThread(function() -- Handle Tumbleweed
                     Wait(1)
                     TriggerEvent('tcrp-stables:DoShit',function(cb)
                     end)
-                    exports['qr-target']:AddTargetEntity(ped, {
+                    exports['rsg-target']:AddTargetEntity(ped, {
                         options = {
                             {
                                 icon = "fas fa-horse-head",
@@ -1256,7 +1256,7 @@ end)
 CreateThread(function()
     while true do
         Wait(1)
-        if Citizen.InvokeNative(0x91AEF906BCA88877, 0, QRCore.Shared.Keybinds['B']) then -- openinventory
+        if Citizen.InvokeNative(0x91AEF906BCA88877, 0, RSGCore.Shared.Keybinds['B']) then -- openinventory
             InvHorse()
             Wait(1) -- Spam protect
         end
@@ -1264,12 +1264,12 @@ CreateThread(function()
 end)
 
 function InvHorse()
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
         if horsePed ~= 0 then
             local pcoords = GetEntityCoords(PlayerPedId())
             local hcoords = GetEntityCoords(horsePed)
             if #(pcoords - hcoords) <= 1.7 then
-                --TriggerEvent('qr-stable:client:horseinventory')
+                --TriggerEvent('rsg-stable:client:horseinventory')
                 local horsestash = data.name..data.citizenid
                 TriggerServerEvent("inventory:server:OpenInventory", "stash", horsestash, { maxweight = 15000, slots = 20, })
                 TriggerEvent("inventory:client:SetCurrentStash", horsestash)
@@ -1283,23 +1283,23 @@ function InvHorse()
 end    
 
 local function TradeHorse()
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
         if horsePed ~= 0 then
-            local player, distance = QRCore.Functions.GetClosestPlayer()
+            local player, distance = RSGCore.Functions.GetClosestPlayer()
             if player ~= -1 and distance < 1.5 then
                 local playerId = GetPlayerServerId(player)
                 local horseId = data.citizenid
                 TriggerServerEvent('tcrp-stables:server:TradeHorse', playerId, horseId)
-                QRCore.Functions.Notify('Horse has been traded with nearest person', 'success', 7500)
+                RSGCore.Functions.Notify('Horse has been traded with nearest person', 'success', 7500)
             else
-                QRCore.Functions.Notify('No nearby person!', 'success', 7500)
+                RSGCore.Functions.Notify('No nearby person!', 'success', 7500)
             end
         end
     end)
 end
 
 local function SpawnHorse()
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
         if (data) then
             local ped = PlayerPedId()
             local model = GetHashKey(data.horse)
@@ -1353,7 +1353,7 @@ local function SpawnHorse()
                     local horseCoords = GetEntityCoords(horsePed)
                     local distance = GetDistanceBetweenCoords(horseCoords, coords)
                     if distance > 150 then
-                        QRCore.Functions.Notify('You need to be near a road!', 'error', 7500)
+                        RSGCore.Functions.Notify('You need to be near a road!', 'error', 7500)
                         Wait(100)
                         DeleteEntity(horsePed)
                         Wait(100)
@@ -1390,7 +1390,7 @@ end
 exports('spawnHorse', handleSpawnHorse)
 -------------- Tack Menu --------------
 RegisterNetEvent('tcrp-stables:custMenu',function()
-    exports['qr-menu']:openMenu({
+    exports['rsg-menu']:openMenu({
         {
             header = "Horse Customization",
             isMenuHeader = true,
@@ -1502,7 +1502,7 @@ RegisterNetEvent('tcrp-stables:closeMenu', function()
 end)
 
 RegisterNetEvent('tcrp-stables:closeMenu', function()
-    exports['qr-menu']:closeMenu()
+    exports['rsg-menu']:closeMenu()
     
 end)
 --[[ RegisterCommand('tack', function()
@@ -1554,7 +1554,7 @@ function SaddleMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(saddleMenu)
+    exports['rsg-menu']:openMenu(saddleMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:saddleMenu',function()
@@ -1563,7 +1563,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applySaddle',function(saddle,data)
     if saddle == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local SaddleUsing = 0
@@ -1577,13 +1577,13 @@ RegisterNetEvent('tcrp-stables:client:applySaddle',function(saddle,data)
                 local SaddleDataEncoded = SaddleUsing
                 TriggerServerEvent('tcrp-stables:server:SaveSaddle',SaddleDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         SaddleMenu()
     else
         for k,v in pairs(saddle) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local SaddleUsing = "0x"..v 
@@ -1595,7 +1595,7 @@ RegisterNetEvent('tcrp-stables:client:applySaddle',function(saddle,data)
                     local SaddleDataEncoded = SaddleUsing
                     TriggerServerEvent('tcrp-stables:server:SaveSaddle',SaddleDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -1649,7 +1649,7 @@ function BlanketMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(blanketMenu)
+    exports['rsg-menu']:openMenu(blanketMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:blanketMenu',function()
@@ -1658,7 +1658,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyBlanket',function(blanket,data)
     if blanket == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local BlanketUsing = 0
@@ -1672,13 +1672,13 @@ RegisterNetEvent('tcrp-stables:client:applyBlanket',function(blanket,data)
                 local BlanketDataEncoded = BlanketUsing
                 TriggerServerEvent('tcrp-stables:server:SaveBlanket',BlanketDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         BlanketMenu()
     else
         for k,v in pairs(blanket) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local BlanketUsing = "0x"..v 
@@ -1690,7 +1690,7 @@ RegisterNetEvent('tcrp-stables:client:applyBlanket',function(blanket,data)
                     local BlanketDataEncoded = BlanketUsing
                     TriggerServerEvent('tcrp-stables:server:SaveBlanket',BlanketDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -1744,7 +1744,7 @@ function BagMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(bagMenu)
+    exports['rsg-menu']:openMenu(bagMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:bagMenu',function()
@@ -1753,7 +1753,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyBag',function(bag,data)
     if bag == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local BagUsing = 0
@@ -1767,13 +1767,13 @@ RegisterNetEvent('tcrp-stables:client:applyBag',function(bag,data)
                 local BagDataEncoded = BagUsing
                 TriggerServerEvent('tcrp-stables:server:SaveBag',BagDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         BagMenu()
     else
         for k,v in pairs(bag) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local BagUsing = "0x"..v 
@@ -1785,7 +1785,7 @@ RegisterNetEvent('tcrp-stables:client:applyBag',function(bag,data)
                     local BagDataEncoded = BagUsing
                     TriggerServerEvent('tcrp-stables:server:SaveBag',BagDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -1839,7 +1839,7 @@ function HornMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(hornMenu)
+    exports['rsg-menu']:openMenu(hornMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:hornMenu',function()
@@ -1848,7 +1848,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyHorn',function(horn,data)
     if horn == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local HornUsing = 0
@@ -1862,13 +1862,13 @@ RegisterNetEvent('tcrp-stables:client:applyHorn',function(horn,data)
                 local HornDataEncoded = HornUsing
                 TriggerServerEvent('tcrp-stables:server:SaveHorn',HornDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         HornMenu()
     else
         for k,v in pairs(horn) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local HornUsing = "0x"..v 
@@ -1880,7 +1880,7 @@ RegisterNetEvent('tcrp-stables:client:applyHorn',function(horn,data)
                     local HornDataEncoded = HornUsing
                     TriggerServerEvent('tcrp-stables:server:SaveHorn',HornDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -1937,7 +1937,7 @@ function StirrupMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(stirrupMenu)
+    exports['rsg-menu']:openMenu(stirrupMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:stirrupMenu',function()
@@ -1946,7 +1946,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyStirrup',function(stirrup,data)
     if stirrup == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local StirrupUsing = 0
@@ -1960,13 +1960,13 @@ RegisterNetEvent('tcrp-stables:client:applyStirrup',function(stirrup,data)
                 local StirrupDataEncoded = StirrupUsing
                 TriggerServerEvent('tcrp-stables:server:SaveStirrup',StirrupDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         StirrupMenu()
     else
         for k,v in pairs(stirrup) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local StirrupUsing = "0x"..v 
@@ -1978,7 +1978,7 @@ RegisterNetEvent('tcrp-stables:client:applyStirrup',function(stirrup,data)
                     local StirrupDataEncoded = StirrupUsing
                     TriggerServerEvent('tcrp-stables:server:SaveStirrup',StirrupDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -2031,7 +2031,7 @@ function ManeMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(maneMenu)
+    exports['rsg-menu']:openMenu(maneMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:maneMenu',function()
@@ -2040,7 +2040,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyMane',function(mane,data)
     if mane == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local ManeUsing = 0
@@ -2054,13 +2054,13 @@ RegisterNetEvent('tcrp-stables:client:applyMane',function(mane,data)
                 local ManeDataEncoded = ManeUsing
                 TriggerServerEvent('tcrp-stables:server:SaveMane',ManeDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         ManeMenu()
     else
         for k,v in pairs(mane) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local ManeUsing = "0x"..v 
@@ -2072,7 +2072,7 @@ RegisterNetEvent('tcrp-stables:client:applyMane',function(mane,data)
                     local ManeDataEncoded = ManeUsing
                     TriggerServerEvent('tcrp-stables:server:SaveMane',ManeDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -2125,7 +2125,7 @@ function TailMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(tailMenu)
+    exports['rsg-menu']:openMenu(tailMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:tailMenu',function()
@@ -2134,7 +2134,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyTail',function(tail,data)
     if tail == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local TailUsing = 0
@@ -2148,13 +2148,13 @@ RegisterNetEvent('tcrp-stables:client:applyTail',function(tail,data)
                 local TailDataEncoded = TailUsing
                 TriggerServerEvent('tcrp-stables:server:SaveTail',TailDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         TailMenu()
     else
         for k,v in pairs(tail) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local TailUsing = "0x"..v 
@@ -2166,7 +2166,7 @@ RegisterNetEvent('tcrp-stables:client:applyTail',function(tail,data)
                     local TailDataEncoded = TailUsing
                     TriggerServerEvent('tcrp-stables:server:SaveTail',TailDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -2219,7 +2219,7 @@ function MaskMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(maskMenu)
+    exports['rsg-menu']:openMenu(maskMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:maskMenu',function()
@@ -2228,7 +2228,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyMask',function(mask,data)
     if mask == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local MaskUsing = 0
@@ -2242,13 +2242,13 @@ RegisterNetEvent('tcrp-stables:client:applyMask',function(mask,data)
                 local MaskDataEncoded = MaskUsing
                 TriggerServerEvent('tcrp-stables:server:SaveMask',MaskDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         MaskMenu()
     else
         for k,v in pairs(mask) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local MaskUsing = "0x"..v 
@@ -2260,7 +2260,7 @@ RegisterNetEvent('tcrp-stables:client:applyMask',function(mask,data)
                     local MaskDataEncoded = MaskUsing
                     TriggerServerEvent('tcrp-stables:server:SaveMask',MaskDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -2313,7 +2313,7 @@ function LuggageMenu(hash)
         }
     end
 
-    exports['qr-menu']:openMenu(luggageMenu)
+    exports['rsg-menu']:openMenu(luggageMenu)
 end
 
 RegisterNetEvent('tcrp-stables:client:luggageMenu',function()
@@ -2322,7 +2322,7 @@ end)
 
 RegisterNetEvent('tcrp-stables:client:applyLuggage',function(luggage,data)
     if luggage == nil then
-        QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+        RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
             local ped = PlayerPedId()
             local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
             local LuggageUsing = 0
@@ -2336,13 +2336,13 @@ RegisterNetEvent('tcrp-stables:client:applyLuggage',function(luggage,data)
                 local LuggageDataEncoded = LuggageUsing
                 TriggerServerEvent('tcrp-stables:server:SaveLuggage',LuggageDataEncoded)
             else 
-                QRCore.Functions.Notify('No Horse Found', 'error')
+                RSGCore.Functions.Notify('No Horse Found', 'error')
             end
         end)
         LuggageMenu()
     else
         for k,v in pairs(luggage) do
-            QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+            RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
                 local ped = PlayerPedId()
                 local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)   
                 local LuggageUsing = "0x"..v 
@@ -2354,7 +2354,7 @@ RegisterNetEvent('tcrp-stables:client:applyLuggage',function(luggage,data)
                     local LuggageDataEncoded = LuggageUsing
                     TriggerServerEvent('tcrp-stables:server:SaveLuggage',LuggageDataEncoded)
                 else 
-                    QRCore.Functions.Notify('No Horse Found', 'error')
+                    RSGCore.Functions.Notify('No Horse Found', 'error')
                 end
             end)
         end
@@ -2366,55 +2366,55 @@ end)
 function applyImportantThings()
     Citizen.InvokeNative(0x931B241409216C1F, PlayerPedId(), horsePed, 0)
     SetPedConfigFlag(horsePed, 297, true)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckSaddle', function(cb,saddle)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckSaddle', function(cb,saddle)
         print(tonumber(cb.saddle))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.saddle), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckBlanket', function(cb,blanket)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckBlanket', function(cb,blanket)
         print(tonumber(cb.blanket))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.blanket), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckBag', function(cb,bag)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckBag', function(cb,bag)
         print(tonumber(cb.bag))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.bag), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckHorn', function(cb,horn)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckHorn', function(cb,horn)
         print(tonumber(cb.horn))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.horn), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckStirrup', function(cb,stirrup)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckStirrup', function(cb,stirrup)
         print(tonumber(cb.stirrup))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.stirrup), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckMane', function(cb,mane)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckMane', function(cb,mane)
         print(tonumber(cb.mane))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.mane), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckTail', function(cb,tail)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckTail', function(cb,tail)
         print(tonumber(cb.tail))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.tail), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckLuggage', function(cb,luggage)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckLuggage', function(cb,luggage)
         print(tonumber(cb.luggage))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
         Citizen.InvokeNative(0xD3A7B003ED343FD9, horsePed, tonumber(cb.luggage), true, true, true) 
     end)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:CheckMask', function(cb,mask)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:CheckMask', function(cb,mask)
         print(tonumber(cb.mask))
         local ped = PlayerPedId()
         local mount = Citizen.InvokeNative(0x4C8B59171957BCF7, ped)
@@ -2481,7 +2481,7 @@ end
 CreateThread(function()
     while true do
         Wait(1)
-        if Citizen.InvokeNative(0x91AEF906BCA88877, 0, QRCore.Shared.Keybinds['H']) then -- call horse
+        if Citizen.InvokeNative(0x91AEF906BCA88877, 0, RSGCore.Shared.Keybinds['H']) then -- call horse
             if not HorseCalled then
             SpawnHorse()
             HorseCalled = true
@@ -2489,7 +2489,7 @@ CreateThread(function()
      else
         moveHorseToPlayer()
          end
-    elseif Citizen.InvokeNative(0x91AEF906BCA88877, 0, QRCore.Shared.Keybinds['HorseCommandFlee']) then -- flee horse
+    elseif Citizen.InvokeNative(0x91AEF906BCA88877, 0, RSGCore.Shared.Keybinds['HorseCommandFlee']) then -- flee horse
             if horseSpawned ~= 0 then
                 Flee()
             end
@@ -2588,13 +2588,13 @@ local HorseId = nil
 RegisterNetEvent('tcrp-stables:client:SpawnHorse', function(data)
     HorseId = data.player.id
     TriggerServerEvent("tcrp-stables:server:SetHoresActive", data.player.id)
-    QRCore.Functions.Notify('Horse has been set active call from back by whistling', 'success', 7500)
+    RSGCore.Functions.Notify('Horse has been set active call from back by whistling', 'success', 7500)
 end)
 
 RegisterNetEvent("tcrp-stables:client:storehorse", function(data)
  if (horsePed ~= 0) then
     TriggerServerEvent("tcrp-stables:server:SetHoresUnActive", HorseId)
-    QRCore.Functions.Notify('Taking your horse to the back', 'success', 7500)
+    RSGCore.Functions.Notify('Taking your horse to the back', 'success', 7500)
     Flee()
     Wait(10000)
     DeletePed(horsePed)
@@ -2604,7 +2604,7 @@ RegisterNetEvent("tcrp-stables:client:storehorse", function(data)
 end)
 
 RegisterNetEvent("tcrp-stables:client:tradehorse", function(data)
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetActiveHorse', function(data,newnames)
         if (horsePed ~= 0) then
             TradeHorse()
             Flee()
@@ -2613,7 +2613,7 @@ RegisterNetEvent("tcrp-stables:client:tradehorse", function(data)
             SetEntityAsNoLongerNeeded(horsePed)
             HorseCalled = false
         else
-            QRCore.Functions.Notify('You dont have a horse out', 'success', 7500)
+            RSGCore.Functions.Notify('You dont have a horse out', 'success', 7500)
         end
     end)
 end)
@@ -2626,7 +2626,7 @@ RegisterNetEvent('tcrp-stables:client:menu', function()
             icon = "fa-solid fa-circle-user",
         },
     }
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:GetHorse', function(cb)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetHorse', function(cb)
         for _, v in pairs(cb) do
             GetHorse[#GetHorse + 1] = {
                 header = v.name,
@@ -2641,7 +2641,7 @@ RegisterNetEvent('tcrp-stables:client:menu', function()
                 }
             }
         end
-        exports['qr-menu']:openMenu(GetHorse)
+        exports['rsg-menu']:openMenu(GetHorse)
     end)
 end)
 
@@ -2653,7 +2653,7 @@ RegisterNetEvent('tcrp-stables:client:MenuDel', function()
             icon = "fa-solid fa-circle-user",
         },
     }
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:GetHorse', function(cb)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetHorse', function(cb)
         for _, v in pairs(cb) do
             GetHorse[#GetHorse + 1] = {
                 header = v.name,
@@ -2665,7 +2665,7 @@ RegisterNetEvent('tcrp-stables:client:MenuDel', function()
                 }
             }
         end
-        exports['qr-menu']:openMenu(GetHorse)
+        exports['rsg-menu']:openMenu(GetHorse)
     end)
 end)
 
@@ -2678,7 +2678,7 @@ RegisterNetEvent('tcrp-stables:client:MenuDelC', function(data)
             icon = "fa-solid fa-circle-user",
         },
     }
-    QRCore.Functions.TriggerCallback('tcrp-stables:server:GetHorse', function(cb)
+    RSGCore.Functions.TriggerCallback('tcrp-stables:server:GetHorse', function(cb)
         for _, v in pairs(cb) do
             GetHorse[#GetHorse + 1] = {
                 header = v.name,
@@ -2693,12 +2693,12 @@ RegisterNetEvent('tcrp-stables:client:MenuDelC', function(data)
                 }
             }
         end
-        exports['qr-menu']:openMenu(GetHorse)
+        exports['rsg-menu']:openMenu(GetHorse)
     end)
 end)
 
 RegisterNetEvent('tcrp-stables:client:DeleteHorse', function(data)
-    QRCore.Functions.Notify('Horse has been successfully removed', 'success', 7500)
+    RSGCore.Functions.Notify('Horse has been successfully removed', 'success', 7500)
     TriggerServerEvent("tcrp-stables:server:DelHores", data.player.id)
 end)
 
