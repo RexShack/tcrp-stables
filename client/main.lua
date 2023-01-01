@@ -87,8 +87,14 @@ RegisterNetEvent('tcrp-stables:client:custShop', function()
         Wait(3900)
         DestroyCam(groundCam)
     end
-    if horsePed ~= 0 then 
-        createCamera(horsePed)
+    if horsePed ~= 0 then
+        local pcoords = GetEntityCoords(PlayerPedId())
+        local coords = GetEntityCoords(horsePed)
+        if #(pcoords - coords) <= 30.0 then
+            createCamera(horsePed)
+        else
+            RSGCore.Functions.Notify('Your Horse Is Too Far!', 'error', 7500)
+        end 
     else 
         RSGCore.Functions.Notify('No Horse Detected', 'error', 7500)
     end
